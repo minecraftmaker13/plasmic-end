@@ -11,9 +11,8 @@
  *    will be REGENERATED on each build.
  *
  */
-package net.mcreator.endsbotany;
+package net.mcreator.;
 
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 import net.minecraftforge.network.simple.SimpleChannel;
@@ -26,35 +25,41 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.endsbotany.init.EndsBotanyModItems;
-import net.mcreator.endsbotany.init.EndsBotanyModFeatures;
-import net.mcreator.endsbotany.init.EndsBotanyModBlocks;
+import net.mcreator.plasmicend.init.EndsBotanyModItems;
+import net.mcreator.plasmicend.init.EndsBotanyModFeatures;
+import net.mcreator.plasmicend.init.EndsBotanyModBlocks;
+import net.mcreator.plasmicend.EndsBotanyMod;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
 
-@Mod("ends_botany")
-public class EndsBotanyMod {
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+@Mod("ends_botany") public class EndsBotanyMod {
 	public static final Logger LOGGER = LogManager.getLogger(EndsBotanyMod.class);
 	public static final String MODID = "ends_botany";
 	private static final String PROTOCOL_VERSION = "1";
-	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MODID, MODID), () -> PROTOCOL_VERSION,
-			PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
+	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MODID, MODID),
+		() -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 	private static int messageID = 0;
-
 	public EndsBotanyMod() {
-
+		
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		EndsBotanyModBlocks.REGISTRY.register(bus);
 		EndsBotanyModItems.REGISTRY.register(bus);
-
+		
+		
 		EndsBotanyModFeatures.REGISTRY.register(bus);
-
+		
+		
+		
+		
+		
+		
 	}
-
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,
-			BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
+										BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
 		PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
 		messageID++;
 	}
