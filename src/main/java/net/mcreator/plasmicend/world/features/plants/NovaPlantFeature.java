@@ -67,10 +67,7 @@ public class NovaPlantFeature extends RandomPatchFeature {
 		return PLACED_FEATURE;
 	}
 	public static final Set<ResourceLocation> GENERATE_BIOMES =
-	Set.of(
-			new ResourceLocation("end_midlands"),
-			new ResourceLocation("end_highlands"),
-			new ResourceLocation("end_barrens")	);
+	null;
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(
 				Level.END
 	);

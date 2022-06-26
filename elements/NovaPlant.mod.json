@@ -2,10 +2,10 @@
   "_fv": 28,
   "_type": "plant",
   "definition": {
-    "renderType": 12,
+    "renderType": 13,
     "texture": "novaplant",
     "textureBottom": "",
-    "customModelName": "Cross model",
+    "customModelName": "Crop model",
     "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",
@@ -86,17 +86,7 @@
     "spawnWorldTypes": [
       "End"
     ],
-    "restrictionBiomes": [
-      {
-        "value": "end_highlands"
-      },
-      {
-        "value": "end_midlands"
-      },
-      {
-        "value": "end_barrens"
-      }
-    ],
+    "restrictionBiomes": [],
     "patchSize": 64,
     "generateAtAnyHeight": false
   }

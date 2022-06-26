@@ -1,7 +1,7 @@
 {
-  "parent": "block/cross",
+  "parent": "block/crop",
   "textures": {
-    "cross": "ends_botany:blocks/novaplant",
+    "crop": "ends_botany:blocks/novaplant",
     "particle": "ends_botany:blocks/novaplant"
   }
 }
