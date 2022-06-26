@@ -1,0 +1,41 @@
+{
+  "mod_elements": [
+    {
+      "name": "NovaPlant",
+      "type": "plant",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_plant"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "block.ends_botany.nova_plant": "Nova Plant"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "ends_botany",
+    "modName": "Plasmic end",
+    "version": "1.0.0",
+    "author": "dooli, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.18.2",
+    "modElementsPackage": "net.mcreator.endsbotany",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200120510
+}

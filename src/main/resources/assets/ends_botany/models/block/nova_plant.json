@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ends_botany:blocks/novaplant",
+    "particle": "ends_botany:blocks/novaplant"
+  }
+}
